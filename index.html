@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
 
   <style type="text/css">
-    button {
+    button.player-button {
             border-style: none;
             cursor: pointer; color: white;
             background-color: transparent;
+            font-size: large;
            }
     div.player {
                 width: 800px; height: 600px;
@@ -26,10 +28,15 @@
 
 
     .video-box-flex{
-          flex-direction: row;
-          flex-grow: 0
+          display: flex;
+          justify-content: space-between; /* Распределяет пространство между группами */
+          align-items: center;
+          padding: 0 10px;
 
     }
+    .spacer {
+    flex-grow: 1;
+  }
 
   </style>
 
@@ -40,13 +47,15 @@
       <div class="js-video-container">
       </div>
     <div class="video-box-flex">
-       <button id="play_button" class="js-play-button fa fa-play" ></button>
-       <button id="mute_button" class="js-mute-button fa fa-volume-off" ></button>
-       <button id="volume_on_button" class="js-volume-button fa fa-volume-up" ></button>
-       <button  id="pause_button" class="js-pause-button fa fa-pause" ></button>
+       <button id="play_button" class="js-play-button fa fa-play player-button" ></button>
+       <button id="mute_button" class="js-mute-button fa fa-volume-off player-button" ></button>
+       <button id="volume_on_button" class="js-volume-button fa fa-volume-up player-button" ></button>
+       <button  id="pause_button" class="js-pause-button fa fa-pause player-button" ></button>
+      <div class="spacer"></div>
+      <button  id="full_mode_button" class="js-fullscreen-button fa fa-expand player-button" ></button>
+
     </div>
 </div>
-
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
