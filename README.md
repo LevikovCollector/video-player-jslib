@@ -92,3 +92,5 @@ JS код поставляется в виде одного файла `player.j
   <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
 </div>
 ```
+## Ссылка на демо плеера
+Страница с плеером: [index.html](index.html)

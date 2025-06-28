@@ -21,11 +21,10 @@
               box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
             }
-    .js-video-container{
-           flex-grow: 1;
+
+    .video-container{
+      flex-grow: 1;
     }
-
-
     .video-box-flex{
           display: flex;
           justify-content: space-between; /* Распределяет пространство между группами */
@@ -42,18 +41,27 @@
   <title>Player2</title>
 </head>
 <body>
-  <div id="player"  class='player'>
-      <div class="js-video-container">
-      </div>
-    <div class="video-box-flex">
-       <button id="play_button" class="js-play-button fa fa-play player-button" ></button>
-       <button id="mute_button" class="js-mute-button fa fa-volume-off player-button" ></button>
-       <button id="volume_on_button" class="js-volume-button fa fa-volume-up player-button" ></button>
-       <button  id="pause_button" class="js-pause-button fa fa-pause player-button" ></button>
-      <div class="spacer"></div>
-      <button  id="full_mode_button" class="js-fullscreen-button fa fa-expand player-button" ></button>
+<div id="player" class='player'>
+  <div class="js-video-container video-container">
+  </div>
+  <div class="video-box-flex">
+    <button id="play_button" class="js-play-button player-button">
+      <div class="fa fa-play"></div>
+    </button>
+    <button id="pause_button" class="js-pause-button  player-button">
+      <div class="fa fa-pause"></div>
+    </button>
+    <button id="mute_button" class="js-mute-button  player-button">
+      <div class="fa fa-volume-off"></div>
+    </button>
+    <button id="volume_on_button" class="js-volume-button  player-button">
+      <div class="fa fa-volume-up"></div>
+    </button>
 
-    </div>
+    <div class="spacer"></div>
+    <button id="full_mode_button" class="js-fullscreen-button fa fa-expand player-button"></button>
+
+  </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
