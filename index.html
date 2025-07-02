@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="icon" href="favicon.png" type="image/x-icon">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style type="text/css">
     .player-button {
             border-style: none;
@@ -12,7 +14,7 @@
             background-color: transparent;
             font-size: larger;
             padding: 12px;
-            padding-inline: 4px;
+            padding-inline: 3px;
             margin-inline: 6px;
            }
     .player {
@@ -32,11 +34,41 @@
           display: flex;
           justify-content: space-between; /* Распределяет пространство между группами */
           align-items: center;
+          padding-right: 3px;
 
     }
     .spacer {
     flex-grow: 1;
   }
+    .duration{
+    padding-right: 2px;
+    color: white;
+    }
+    .current-time{
+      padding-left: 10px;
+      color: white;
+
+
+    }
+    .roboto-time {
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+      font-variation-settings:
+        "wdth" 400;
+}
+    .middle-container{
+        display: flex;
+
+    }
+    .progress-bar{
+      flex-grow: 1;
+      background-color: grey;
+    }
+    .progress-slider{
+    background-color: red;
+    }
 
   </style>
 
@@ -47,21 +79,38 @@
   <div class="js-video-container video-container">
   </div>
   <div class="video-box-flex">
-    <button id="play_button" class="js-play-button player-button">
-      <div class="fa fa-play"></div>
-    </button>
-    <button id="pause_button" class="js-pause-button  player-button">
-      <div class="fa fa-pause"></div>
-    </button>
-    <button id="mute_button" class="js-mute-button  player-button">
-      <div class="fa fa-volume-off"></div>
-    </button>
-    <button id="volume_on_button" class="js-volume-button  player-button">
-      <div class="fa fa-volume-up"></div>
-    </button>
+    <div>
+        <button id="play_button" class="js-play-button player-button">
+          <div class="fa fa-play"></div>
+        </button>
+        <button id="pause_button" class="js-pause-button  player-button">
+          <div class="fa fa-pause"></div>
+        </button>
+        <button id="mute_button" class="js-mute-button  player-button">
+          <div class="fa fa-volume-off"></div>
+        </button>
+        <button id="volume_on_button" class="js-volume-button  player-button">
+          <div class="fa fa-volume-up"></div>
+        </button>
+    </div>
+    <div  class="middle-container">
+         <div class="current-time roboto-time">
+            <span class="js-current-time"></span>
+        </div>
+         <div class="js-progress progress-bar" >
+      <div class="js-progress-slider progress-slider" >Прогресс</div>
+    </div>
+         <div class="duration roboto-time">
+              <span class="js-duration"></span>
+         </div>
+     </div>
+    <div>
+         <div class="spacer"></div>
+        <button id="full_mode_button" class="js-fullscreen-button fa fa-expand player-button"></button>
+    </div>
+    </div>
 
-    <div class="spacer"></div>
-    <button id="full_mode_button" class="js-fullscreen-button fa fa-expand player-button"></button>
+
 
   </div>
 </div>
